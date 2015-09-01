@@ -1,0 +1,17 @@
+class RandomEvent < ActiveRecord::Base
+  belongs_to(:game)
+  random1 = RandomEvent.new(:description => "lost 0.10 bitcoins in a untimely sports bet with Travis Crampton.", :change_money => (-23))
+  random2 = RandomEvent.new(:description => "was chased by Andrew's lost & rabies-infested dog that wasn't properly tracked by his app.", :change_energy => (-20))
+  random3 = RandomEvent.new(:description => "found half a bottle of Burnetts on the ground and drank it.", :change_happiness => 30)
+  random4 = RandomEvent.new(:description => "found 0.243 bitcoins in the trash.", :change_money => 56.07)
+  random5 = RandomEvent.new(:description => "befriended a homeless man who shared his last drops of alcohol.", :change_happiness => 20 )
+  random6 = RandomEvent.new(:description => "got a ticket from the Finest for public intoxication and slightly sobered up. Thanks Officer Iman.", :change_happiness => -10, :change_money => -30)
+  random7 = RandomEvent.new(:description => "took a nap in the dumpster with Bunker, who could not explain why he was in the dumpster.", :change_energy => 15, :change_happiness => -15)
+  random8 = RandomEvent.new(:description => "got in a barfight with a minor named Jennifer Bell. Lost.", :change_energy => -10)
+  random9 = RandomEvent.new(:description => "puked in the alley outside the bar.", :change_happiness => -10)
+  random10 = RandomEvent.new(:description => "got egged by Austin Kincaid, standing in a jock-strap atop Big Pink.", :change_energy => -10)
+  random11 = RandomEvent.new(:description => "was assulted, beaten, and left to die by an intoxicated and violent Jason Lane.", :change_energy => -80)
+  random12 = RandomEvent.new(:description => "encountered a butt-ass naked Carlo de Gregorio, doing scorpion yoga pose on the sidewalk in front of Powells. Mysteriously sobered up a little.", :change_happiness => -10)
+  random13 = RandomEvent.new(:description => "used Iman's Kush app to acquire medical grade marijuana to scent your backpack and attract dilenquent teenagers.", :change_money => -40)
+  random14 = RandomEvent.new(:description => "was found by Kyle Mellander, who took them home in his soccer-mom van, fed them nourishing glass cans of organic, free-range, grass-fed, sustainable, gluten-free, locally sourced, baby food, and tucked them into bed with a kiss goodnight. Game over.")
+end

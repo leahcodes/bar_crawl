@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901172854) do
+ActiveRecord::Schema.define(version: 20150901213152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,13 +39,11 @@ ActiveRecord::Schema.define(version: 20150901172854) do
     t.datetime "updated_at"
   end
 
-  create_table "randoms", force: :cascade do |t|
-    t.integer  "change_happiness"
-    t.integer  "change_energy"
-    t.float    "change_money"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "random_events", force: :cascade do |t|
+    t.integer "change_happiness"
+    t.integer "change_energy"
+    t.float   "change_money"
+    t.string  "description"
   end
 
   create_table "stops", force: :cascade do |t|
