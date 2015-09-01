@@ -1,3 +1,3 @@
-class Random < ActiveRecord::Base
+class RandomEvent < ActiveRecord::Base
   belongs_to(:game)
 end
