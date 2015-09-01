@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: barcrawl_development
+
+test:
+  adapter: postgresql
+  database: barcrawl_test
+
+production:
+  adapter: postgresql
+  database: barcrawl_production
