@@ -22,3 +22,13 @@ a {
   border: 2px solid white;
 
 }
+
+.form-text {
+  color: black;
+}
+
+.form-btn {
+  color: #FFFFFF;
+  background-color: black;
+  border: 2px solid white;
+}
