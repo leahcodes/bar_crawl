@@ -22,5 +22,13 @@ end
 post('/new_character') do
   name = params.fetch("name")
   player = Game.create(:name => name)
-  redirect("/character_profile")
+  redirect("/turn/1")
+end
+
+get('/turn/:id') do
+  stop_number = (params.fetch('id').to_i + 1)
+  status_bar = ['<span class="green-status-bar">',"|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|"]
+  status_bar.insert(stop_number,"</span>")
+  @green_status = status_bar.join(" ")
+  erb(:turn)
 end
