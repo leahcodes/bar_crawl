@@ -6,8 +6,7 @@ class Game < ActiveRecord::Base
 
 
   define_method(:random_event) do
-    rand_num = rand(14) + 1
-    crawl_event = RandomEvent.find(rand_num)
+    crawl_event = RandomEvent.find(rand(14) + 1)
   end
 
   define_method(:turn) do
