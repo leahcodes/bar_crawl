@@ -23,6 +23,10 @@ a {
 
 }
 
+.box {
+  border: 2px solid white;
+}
+
 .form-text {
   color: black;
 }
@@ -31,4 +35,19 @@ a {
   color: #FFFFFF;
   background-color: black;
   border: 2px solid white;
+}
+
+.green-status-bar {
+  color:#00CC00;
+}
+
+.stats-box {
+  border: 2px solid white;
+  float: left;
+  width: 20%;
+
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
