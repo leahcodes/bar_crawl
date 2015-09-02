@@ -141,25 +141,23 @@ a {
   margin-bottom:10px;
 }
 
-@keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% {left:0px; top:0px;}
-}
-
 .crazy-maniacal-running {
   width:100px;
   height:200px;
   margin: 10%;
-  animation-name: example;
-  animation-duration: 5s;
-  transform: rotate(360deg) scale(1);
-  transition: 1s ease-in-out;
+  animation-name: foo;
+  transform: translate3d(100px, 100px, 0px);
+  animation-iteration-count: infinite;
+  clear:
 }
 
-
+@keyframes foo {
+    0%   {left:0px; top:0px; transform: translate3d(50px, 40px, 0px);}
+    25%  {left:200px; top:0px; transform: translate3d(50px, 50px, 0px);}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
 
 
 /*.coffee-button {
