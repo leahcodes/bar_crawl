@@ -3,12 +3,14 @@
 
 
 <div class="status box">
-  <strong><%= @green_status %></strong>
+  <strong><%=@green_status%></strong>
 </div>
 
-<div class="stats-box">
-    <span class="avatar"><img src="avatar.jpeg" alt="gravitar"/></span>
-    <p>Energy: <span class="energy-level"><%= %></span></p>
-    <p>Happiness: <span class='happiness-level'><%= %></span></p>
-    <p>Money: <span class="money-level">$ <%=%></span></p>
+<div class="row">
+  <div class="stats-box">
+      <center><div class="avatar"><img src="avatar.jpeg" alt="gravitar"/></div></center>
+      <span class="col-sm-1">Energy: <span class="energy-level"><%= %></span></span><br>
+      <span class="col-sm-1">Happiness: <span class='happiness-level'><%= %></span></span><br>
+      <span class="col-xs-1">Money: </span><span class="col-xs-offset-6 col-xs-1">$</span><span class="money-level"> <%=%></span>
+  </div>
 </div>
