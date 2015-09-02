@@ -1,4 +1,10 @@
-<h3><%= @game.name %> <%= @event.bar %></h3>
+
+<% if @coffee == true  %>
+  <h3><%= @game.name %> <%= @event.cafe %></h3>
+<% else %>
+  <h3><%= @game.name %> <%= @event.bar %></h3>
+<% end %>
+
 
 <% if @event.change_money != nil %>
   <p><%= @event.change_money %> Dollars</p>
