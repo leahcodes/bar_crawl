@@ -1,9 +1,3 @@
-<% if @coffee == true  %>
-  <h3><%= @game.name %> <%= @event.cafe %></h3>
-<% else %>
-  <h3><%= @game.name %> <%= @event.bar %></h3>
-<% end %>
-
 <div class="col-md-8">
   <div class="header-block">
     <h1>SE 39th and Hawthorne</h1>
@@ -22,5 +16,11 @@
     </div>
   </div>
 
-
+<div class="turn-content">
+  <% if @coffee == true  %>
+    <h4><%= @game.name %> <%= @event.cafe %></h4>
+  <% else %>
+    <h4><%= @game.name %> <%= @event.bar %></h4>
+  <% end %>
 <a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
+</div>

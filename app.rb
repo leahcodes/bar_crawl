@@ -29,7 +29,7 @@ post('/new_character') do
 end
 
 get('/turn/:id') do
-  turn = 1
+  turn = 10
   bar = Styling.new
   @green_status = bar.status_bar(turn)
   erb(:turn)
@@ -105,7 +105,9 @@ patch('/random_events/cafe') do
 #   turn = 1
 #   bar = Styling.new
 #   @green_status = bar.status_bar(turn)
-
+  turn = 10
+  bar = Styling.new
+  @green_status = bar.status_bar(turn)
   @game = Game.all.last
   @event = RandomEvent.new_random_event
 
