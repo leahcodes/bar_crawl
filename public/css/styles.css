@@ -25,6 +25,8 @@ a {
 
 .box {
   border: 2px solid white;
+  margin: 30px;
+  padding: 20px;
 }
 
 .form-text {
@@ -37,14 +39,23 @@ a {
   border: 2px solid white;
 }
 
+.status-bar {
+  font-size: 20px;
+}
+
 .green-status-bar {
   color:#00CC00;
+  font-size: 20px;
 }
 
 .stats-box {
   border: 2px solid white;
   float: left;
   width: 20%;
+  margin: 30px;
+  padding: 20px;
+  font-size: 18px;
+  text-align: left;
 
   animation-name: blinker;
   animation-duration: 1s;
