@@ -18,8 +18,11 @@
 
   <!-- <div class=""> -->
     <div class="turn-content">
-      <span class="coffee-button  col-md-3 col-md-offset-1">
-        <form id="choose_coffee" action="/character_status" method="post">
+
+      <span class="coffee-button col-md-3 col-md-offset-1">
+
+        <form id="choose_coffee" action="/random_events/cafe" method="post">
+
           <input type="hidden" name="_method" value="patch">
             <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">
             <br>
@@ -28,7 +31,8 @@
       </span>
 
       <span class="beer-button col-md-2">
-        <form id="choose_beer" action="/character_status" method="post">
+        <form id="choose_beer" action="/random_events/bar" method="post">
+
           <input type="hidden" name="_method" value="patch">
             <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
             <br>

@@ -19,5 +19,4 @@ class Styling
     green_status_bar.push(percent)
     green_status = green_status_bar.join(" ")
   end
-
 end

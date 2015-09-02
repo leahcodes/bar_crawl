@@ -1,3 +1,9 @@
+<% if @coffee == true  %>
+  <h3><%= @game.name %> <%= @event.cafe %></h3>
+<% else %>
+  <h3><%= @game.name %> <%= @event.bar %></h3>
+<% end %>
+
 <div class="col-md-8">
   <div class="header-block">
     <h1>SE 39th and Hawthorne</h1>
@@ -16,31 +22,5 @@
     </div>
   </div>
 
-  <!-- <div class=""> -->
-    <div class="turn-content">
-      <p><%= @game.name %> wants to say that this is the end and this is why this is a signal for help and now I am dead.</p>
-      <p> YOU DEAD </p>
-    <div class='turn-event'>
 
-
-
-      <!-- <%= @event.bar %> -->
-      <!-- <% if @event.change_money != nil %>
-        <p><%= @event.change_money %> Dollars</p>
-      <% end %>
-
-      <% if @event.change_happiness != nil %>
-        <p><%= @event.change_happiness %> Happiness/Blood Alcohol Content</p>
-      <% end %>
-
-
-      <% if @event.change_energy != nil %>
-        <p><%= @event.change_energy %> Energy</p>
-      <% end %> -->
-    </div>
-
-      <a href="http://www.ashleymadison.com" class="btn-turn-event btn">Continue</a>
-    </div>
-  <!-- </div> -->
-
-</div>
+<a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
