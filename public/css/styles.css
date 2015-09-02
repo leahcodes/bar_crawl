@@ -4,16 +4,6 @@ body {
 }
 
 .container {
-  /*font-family: 'Press Start 2P', cursive;*/
-  /*text-align: center;*/
-  /*float: center;*/
-  /*border: 5px solid white;*/
-  /*margin-top: 30px;
-  margin-botton: 30px;
-  padding: 30px;*/
-  /*height: 800px;
-  width: 900px;*/
-  /*padding-left: 20%;*/
 
 }
 
@@ -117,9 +107,6 @@ a {
 }
 
 .status {
-  /*width: 110%;
-  margin-top: 2%;
-  margin-left: -5%;*/
   float: center;
   text-align: center;
   font-weight: bold;
