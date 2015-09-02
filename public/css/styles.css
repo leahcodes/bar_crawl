@@ -41,7 +41,7 @@ a {
 }
 
 .green-status-bar {
-  color:#00CC00;
+  color: #008000;
   animation-name: blinker;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -49,7 +49,7 @@ a {
 }
 
 @keyframes blinker {
-    0% { opacity: 1.0; }
+    0% {  opacity: 1.0; }
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }
