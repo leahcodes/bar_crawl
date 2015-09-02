@@ -26,15 +26,5 @@ class CreateDatabaseTables < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    create_table(:randoms) do |t|
-      t.column(:change_happiness, :integer)
-      t.column(:change_energy, :integer)
-      t.column(:change_money, :float)
-      t.column(:description, :string)
-
-      t.timestamps
-    end
-
   end
 end

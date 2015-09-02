@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901210315) do
+ActiveRecord::Schema.define(version: 20150901230927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20150901210315) do
 
   create_table "games", force: :cascade do |t|
     t.integer  "stop_id"
-    t.integer  "random_id"
     t.integer  "happiness"
     t.integer  "energy"
     t.float    "money"
@@ -40,12 +39,10 @@ ActiveRecord::Schema.define(version: 20150901210315) do
   end
 
   create_table "random_events", force: :cascade do |t|
-    t.integer  "change_happiness"
-    t.integer  "change_energy"
-    t.float    "change_money"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "change_happiness"
+    t.integer "change_energy"
+    t.float   "change_money"
+    t.string  "description"
   end
 
   create_table "stops", force: :cascade do |t|
@@ -53,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150901210315) do
     t.integer  "cafe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
 end
