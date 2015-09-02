@@ -1,14 +1,17 @@
-<h1>SE 39th and Hawthorne</h1>
-
-<div class="status box">
-  <strong><%=@green_status%></strong>
-</div>
-
-<div class="row">
-  <div class="stats-box">
-      <center><div class="avatar"><img src="avatar.jpeg" alt="gravitar"/></div></center>
-      <span class="col-sm-1">Energy: <span class="energy-level"><%= %></span></span><br>
-      <span class="col-sm-1">Happiness: <span class='happiness-level'><%= %></span></span><br>
-      <span class="col-xs-1">Money: </span><span class="col-xs-offset-6 col-xs-1">$</span><span class="money-level"> <%=%></span>
+<div class="col-md-8">
+  <div class="header-block">
+    <h1>SE 39th and Hawthorne</h1>
   </div>
+  <div class="status">
+    <strong><%=@green_status%></strong>
+  </div>
+
+<div class="col-md-3">
+  <div class="stats-box">
+      <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
+      <span class="col-sm-1">Energy: <span class="energy-level"><%=  %></span></span><br>
+      <span class="col-sm-1">Happiness: <span class='happiness-level'><%=  %></span></span><br>
+      <span class="col-xs-1">Money: </span><span class="col-xs-offset-6 col-xs-1">$</span><span class="money-level"> <%=  %></span>
+  </div>
+</div>
 </div>

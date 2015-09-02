@@ -26,6 +26,7 @@ post('/new_character') do
 end
 
 get('/turn/:id') do
+  @game = Game.all()
   green_status_bar = ['<span class="green-status-bar">']
   turn_number = 20
   turn_number_float = 20.0
