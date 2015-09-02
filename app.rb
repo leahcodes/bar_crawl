@@ -29,7 +29,7 @@ post('/new_character') do
 end
 
 get('/turn/:id') do
-  @game = Game.all()
+
   green_status_bar = ['<span class="green-status-bar">']
   turn_number = 20
   turn_number_float = 20.0
@@ -48,7 +48,7 @@ get('/turn/:id') do
 end
 
 
-patch('/random_event/bar') do
+patch('/random_events/bar') do
   @game = Game.all.last
   @event = RandomEvent.new_random_event
 

@@ -39,6 +39,9 @@ class RandomEvent < ActiveRecord::Base
    RandomEvent.create(:bar => "used Iman's Kush app to acquire medical grade marijuana to scent your backpack and attract dilenquent teenagers.",
                               :cafe => "used Iman's Kush app to acquire medical grade marijuana to scent your backpack and attract dilenquent teenagers.",
                               :change_money => -40)
+    RandomEvent.create(:bar => "used Iman's Kush app to acquire medical grade marijuana to scent your backpack and attract dilenquent teenagers.",
+                               :cafe => "used Iman's Kush app to acquire medical grade marijuana to scent your backpack and attract dilenquent teenagers.",
+                               :change_money => -40)
    RandomEvent.create(:bar => "was found by Kyle Mellander, who took them home in his soccer-mom van, fed them nourishing glass cans of organic, free-range, grass-fed, sustainable, gluten-free, locally sourced, baby food, and tucked them into bed with a kiss goodnight. Game over.")
 
 end
