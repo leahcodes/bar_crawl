@@ -1,17 +1,46 @@
-<h3><%= @game.name %> <%= @event.bar %></h3>
+<div class="col-md-8">
+  <div class="header-block">
+    <h1>SE 39th and Hawthorne</h1>
+  </div>
+  <div class="status">
+    <strong><%=@green_status%></strong>
+  </div>
 
-<% if @event.change_money != nil %>
-  <p><%= @event.change_money %> Dollars</p>
-<% end %>
+  <div class="col-md-4">
+    <div class="stats-box">
+        <p>char name</p>
+        <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
+        <span class="col-sm-1">Energy: <span class="energy-level"><%=  %></span></span><br>
+        <span class="col-sm-1">Happiness: <span class='happiness-level'><%=  %></span></span><br>
+        <span class="col-xs-1">Money: </span><span class="col-xs-offset-6 col-xs-1">$</span><span class="money-level"> <%=  %></span>
+    </div>
+  </div>
 
-<% if @event.change_happiness != nil %>
-  <p><%= @event.change_happiness %> Happiness/Blood Alcohol Content</p>
-<% end %>
+  <!-- <div class=""> -->
+    <div class="turn-content">
+      <p><%= @game.name %> wants to say that this is the end and this is why this is a signal for help and now I am dead.</p>
+      <p> YOU DEAD </p>
+    <div class='turn-event'>
 
 
-<% if @event.change_energy != nil %>
-  <p><%= @event.change_energy %> Energy</p>
-<% end %>
+
+      <!-- <%= @event.bar %> -->
+      <!-- <% if @event.change_money != nil %>
+        <p><%= @event.change_money %> Dollars</p>
+      <% end %>
+
+      <% if @event.change_happiness != nil %>
+        <p><%= @event.change_happiness %> Happiness/Blood Alcohol Content</p>
+      <% end %>
 
 
-<a href="/turn" class="btn">Continue</a>
+      <% if @event.change_energy != nil %>
+        <p><%= @event.change_energy %> Energy</p>
+      <% end %> -->
+    </div>
+
+      <a href="http://www.ashleymadison.com" class="btn-turn-event btn">Continue</a>
+    </div>
+  <!-- </div> -->
+
+</div>

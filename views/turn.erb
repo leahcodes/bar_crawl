@@ -16,31 +16,26 @@
     </div>
   </div>
 
-  <div class="col-md-4">
+  <!-- <div class=""> -->
     <div class="turn-content">
-      <span class="coffee-button">
+      <span class="coffee-button  col-md-3 col-md-offset-1">
         <form id="choose_coffee" action="/character_status" method="post">
           <input type="hidden" name="_method" value="patch">
-
+            <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">
+            <br>
             <label id="coffee">Coffee @ <%= %></label>
-            <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="50" height="50" alt="Submit Form">
         </form>
       </span>
-      <span class="beer-button">
+
+      <span class="beer-button col-md-2">
         <form id="choose_beer" action="/character_status" method="post">
           <input type="hidden" name="_method" value="patch">
-
-            <label id="beer">Beer @ <%= %></label>
-            <input id="beer" name="beer" type="image" src="/img/beer.png" width="50" height="50" alt="Submit Form">
+            <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
+            <br>
+            <label id="beer-label">Beer @ <%= %></label>
         </form>
       </span>
     </div>
-  </div>
+  <!-- </div> -->
 
 </div>
-
-
-<form action="/random_event/bar" method="post">
-  <input type="hidden" name="_method" value="patch">
-  <button class="btn">Beer</button>
-</form>
