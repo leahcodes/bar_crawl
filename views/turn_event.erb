@@ -1,1 +1,17 @@
-<h1><%= @event.bar %></h1>
+<h3><%= @game.name %> <%= @event.bar %></h3>
+
+<% if @event.change_money != nil %>
+  <p><%= @event.change_money %> Dollars</p>
+<% end %>
+
+<% if @event.change_happiness != nil %>
+  <p><%= @event.change_happiness %> Happiness/Blood Alcohol Content</p>
+<% end %>
+
+
+<% if @event.change_energy != nil %>
+  <p><%= @event.change_energy %> Energy</p>
+<% end %>
+
+
+<a href="/turn" class="btn">Continue</a>

@@ -47,8 +47,12 @@ get('/turn/:id') do
 end
 
 
-get('/random_event/bar') do
+patch('/random_event/bar') do
+  @game = Game.all.last
   @event = RandomEvent.new_random_event
-  binding.pry
+
+  @game.update({happiness: @game.happiness - @event.change_happiness}) if @event.change_happiness != nil
+  @game.update({energy: @game.energy - @event.change_energy}) if @event.change_energy != nil
+  @game.update({money: @game.money - @event.change_money}) if @event.change_money != nil
   erb(:turn_event)
 end

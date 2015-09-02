@@ -7,10 +7,10 @@ class RandomEvent < ActiveRecord::Base
                               :cafe => "got attacked by Andrew's rabies infested dog in the cafe that wasn't properly tracked by his app",
                               :change_energy => (-20))
   RandomEvent.create(:bar => "found half a bottle of Burnetts on the ground and drank it.",
-                              :cafe => "tried out Starbucks' new wine menu.",
+                              :cafe => "tried out Starbucks' new and unnecessary wine menu.",
                               :change_happiness => 30)
   RandomEvent.create(:bar => "found 0.243 bitcoins in the trash.",
-                              :cafe => "steal $56.07 from the tip jar.",
+                              :cafe => "stole $56.07 from the tip jar.",
                               :change_money => 56.07)
   RandomEvent.create(:bar => "befriended a homeless man who shared his last drops of alcohol.",
                               :cafe => "snuck in a flask of patron to add to your venti iced half-cafe 2% traditional machiato wet.",
