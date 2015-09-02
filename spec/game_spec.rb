@@ -14,5 +14,4 @@ describe('#turn') do
     expect(test_game.happiness).to(eq(0))
   end
 
-
 end
