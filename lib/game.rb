@@ -18,6 +18,12 @@ class Game < ActiveRecord::Base
     end
   end
 
+  def win_stop
+    if self.stop_id == 20
+      true
+    end
+  end
+
   private
 
   def capitalize_name
