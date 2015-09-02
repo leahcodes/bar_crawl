@@ -26,9 +26,17 @@ post('/new_character') do
 end
 
 get('/turn/:id') do
-  stop_number = (params.fetch('id').to_i + 1)
-  status_bar = ['<span class="green-status-bar">',"|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|","|"]
-  status_bar.insert(stop_number,"</span>")
-  @green_status = status_bar.join(" ")
+  stop_number = params.fetch('id').to_i
+  green_status_bar = ['<span class="green-status-bar">']
+  turn_number = 20
+  turn_number.times do
+    green_status_bar.push("|")
+  end
+  step_number = 2
+  step_number.times do
+    green_status_bar.insert(step_number, "</span>")
+    step_number += 1
+  end
+  @green_status = green_status_bar.join(" ")
   erb(:turn)
 end
