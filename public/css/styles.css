@@ -33,8 +33,12 @@ a {
 
 .btn {
   border: 2px solid white;
-  font-size: 36px;
+  font-size: 18px;
   border-radius: 0px;
+}
+
+.btn-lg {
+  font-size: 36px;
 }
 
 .btn-turn-event {
@@ -90,7 +94,9 @@ a {
     100% { opacity: 1.0; }
 }
 
-
+.h4 {
+  line-height: 120%
+}
 .avatar {
   margin-bottom: 3px;
 }
@@ -102,12 +108,13 @@ a {
 .stats-box {
   border-right: 5px solid white;
   float: left;
-  text-align: left;
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 1em;
   width: 100%;
 }
+
 
 @media screen and (max-width: 992px) {
   .stats-box {
@@ -161,8 +168,8 @@ a {
 }
 
 .bounceInLeft {
-  -webkit-animation: bounceInLeft 1s, bounceOutRight 2s;
-  -webkit-animation-delay: 0s, 1.5s;
+  -webkit-animation: bounceInLeft 1s, bounce 2s, bounceOutRight 3s;
+  -webkit-animation-delay: 0s, 1.5s, 3s;
 }
 
 .cityscape {
@@ -177,9 +184,6 @@ a {
 .beer-button {
   float: right;
 }*/
-
-
-
 
 .energy-level,
 .happiness-level,
@@ -196,9 +200,33 @@ a {
   align: center;
 }
 .btn-small {
-  font-size: 18px;
+  font-size: 14px;
+}
+
+.btn-big {
+  font-size: 14px;
 }
 
 .running-page {
-  background-image: url ("/img/cityscape.png");
+
+}
+
+.lose {
+  margin-bottom: 20px;
+}
+
+.win {
+  margin: 20px;
+}
+
+.btn-turn-event:hover {
+  color: yellow;
+}
+
+.turn-content .positive-status {
+  color: #06de00;
+}
+
+.turn-content .negative-status {
+  color: #ff0000;
 }
