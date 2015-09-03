@@ -222,3 +222,11 @@ a {
 .btn-turn-event:hover {
   color: yellow;
 }
+
+.turn-content .positive-status {
+  color: #06de00;
+}
+
+.turn-content .negative-status {
+  color: #ff0000;
+}

@@ -10,13 +10,21 @@ class Styling
     turn_number.times do
       green_status_bar.push("|")
     end
-    step_number = turn + 1
-    step_number.times do
-      green_status_bar.insert(step_number, "</span>")
-      step_number += 1
-    end
+
+      green_status_bar.insert((turn + 1), "</span>")
+
     percent = ((turn * 100)/turn_number_float).round(0).to_s + "%"
     green_status_bar.push(percent)
     green_status = green_status_bar.join(" ")
   end
+
+  def status_color(color_number)
+    if color_number > 0
+      return "<span class='positive-status'>"
+    else
+      return "<span class='negative-status'>"
+    end
+  end
+
+
 end
