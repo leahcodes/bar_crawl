@@ -33,14 +33,11 @@ get('/turn/:id') do
   @game = Game.all.last
   @turn = @game.stop_id
   bar = Styling.new
-<<<<<<< HEAD
-  @green_status = bar.status_bar(turn)
+  @green_status = bar.status_bar(@turn)
   @stop = Stop.find(@game.stop_id)
   @bar = Bar.find(@stop.bar_id)
   @coffee_shop = CoffeeShop.find(@stop.coffee_shop_id)
-=======
-  @green_status = bar.status_bar(@turn)
->>>>>>> 82b105c93681322dd41b06a11ae0bab787fde517
+
   erb(:turn)
 end
 
@@ -158,6 +155,10 @@ get('/lose') do
   erb(:lose)
 end
 
-get('/running') do
+get('/running/:id') do
   erb(:running_page)
+end
+
+get('/map/:id') do
+  erb(:map)
 end
