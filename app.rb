@@ -29,22 +29,29 @@ post('/new_character') do
 end
 
 get('/turn/:id') do
+
   @game = Game.all.last
   turn = @game.stop_id
   bar = Styling.new
   @green_status = bar.status_bar(turn)
+  @stop = Stop.find(@game.stop_id)
+  @bar = Bar.find(@stop.bar_id)
+  @coffee_shop = CoffeeShop.find(@stop.coffee_shop_id)
   erb(:turn)
 end
 
 ##################### BAR ######################
 
 patch('/random_events/bar') do
+
   @game = Game.all.last
   turn = @game.stop_id
   bar = Styling.new
   @green_status = bar.status_bar(turn)
 
   @event = RandomEvent.new_random_event
+  @stop = Stop.find(@game.stop_id)
+
 
   @game.update({happiness: @game.happiness + 15}) # because drink beer
 
@@ -95,7 +102,7 @@ patch('/random_events/coffee_shop') do
 
 
 
-  @game.update({happiness: @game.energy + 15}) # because drink beer
+  @game.update({energy: @game.energy + 15}) # because drink beer
 
   if @game.lose == 2
     redirect('/lose')
@@ -132,14 +139,18 @@ end
 ########################
 
 get('/win_stop') do
+  @kyle = false
   erb(:win)
 end
 
 get('/win_kyle') do
+  @kyle = true
   erb(:win)
 end
 
 get('/lose') do
+  @game = Game.all.last
+  @lose_condition = @game.lose
   erb(:lose)
 end
 

@@ -7,15 +7,15 @@
     <strong><%=@green_status%></strong>
   </div>
 
-  <div class="col-md-4">
-    <div class="stats-box">
-        <p>char name</p>
-        <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
-        <span class="col-sm-1">Energy: <span class="energy-level"><%=  %></span></span><br>
-        <span class="col-sm-1">Happiness: <span class='happiness-level'><%=  %></span></span><br>
-        <span class="col-xs-1">Money: </span><span class="col-xs-offset-6 col-xs-1">$</span><span class="money-level"> <%=  %></span>
-    </div>
+<div class="col-md-4">
+  <div class="stats-box">
+      <p><%= @game.name %></p>
+      <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
+      Energy:<span class="energy-level"><%= @game.energy %>%</span><br>
+      Happiness:<span class='happiness-level'><%= @game.happiness %>%</span><br>
+      Money: $<span class="money-level"><%= @game.money %> </span>
   </div>
+</div>
 
 
 <div class="turn-content">
