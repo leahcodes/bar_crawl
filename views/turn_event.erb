@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 
+=======
+<% if @coffee == true  %>
+  <h3><%= @game.name %> <%= @event.coffee_shop %></h3>
+<% else %>
+  <h3><%= @game.name %> <%= @event.bar %></h3>
+<% end %>
+>>>>>>> 467a07f7c8619c1001faf845c261d71794e2cd65
 
 <div class="col-md-8">
   <div class="header-block">
@@ -18,7 +26,11 @@
     </div>
   </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
   <div class="random-event">
     <% if @coffee == true  %>
       <h3><%= @game.name %> <%= @event.cafe %></h3>
@@ -27,3 +39,20 @@
     <% end %>
     <a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
   </div>
+=======
+<a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
+=======
+=======
+>>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
+=======
+>>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
+<div class="turn-content">
+  <% if @coffee == true  %>
+    <h4><%= @game.name %> <%= @event.cafe %></h4>
+  <% else %>
+    <h4><%= @game.name %> <%= @event.bar %></h4>
+  <% end %>
+<a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
+</div>
+>>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
+>>>>>>> 467a07f7c8619c1001faf845c261d71794e2cd65

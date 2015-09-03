@@ -2,7 +2,7 @@ class CreateDatabaseTables < ActiveRecord::Migration
   def change
     create_table(:stops) do |t|
       t.column(:bar_id, :integer)
-      t.column(:cafe_id, :integer)
+      t.column(:coffee_shop_id, :integer)
       t.timestamps
     end
 
@@ -11,7 +11,7 @@ class CreateDatabaseTables < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table(:cafes) do |t|
+    create_table(:coffee_shops) do |t|
       t.column(:name, :string)
       t.timestamps
     end

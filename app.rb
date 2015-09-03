@@ -84,7 +84,8 @@ end
 
 ######################## CAFE ########################
 
-patch('/random_events/cafe') do
+
+patch('/random_events/coffee_shop') do
   @game = Game.all.last
   turn = @game.stop_id
   bar = Styling.new
