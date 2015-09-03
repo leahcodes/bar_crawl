@@ -10,17 +10,18 @@
     <div class="stats-box">
         <p><%= @game.name %></p>
         <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
-        Energy:<span class="energy-level"><%= @game.energy %>%</span><br>
-        Happiness:<span class='happiness-level'><%= @game.happiness %>%</span><br>
-        Money: $<span class="money-level"><%= @game.money %> </span>
+        <p><span class="energy-level">Energy: <%= @game.energy %>%</span></p>
+        <p><span class='happiness-level'>Happiness: <%= @game.happiness %>%</span></p>
+        <p><span class="money-level">Money: $ <%= @game.money %> </span></p>
+        <p><span class="map-button"><a class="btn btn-small" href="/map/<%= @turn %>">Map</a></span></p>
+
     </div>
   </div>
 
-    <div class="turn-content">
+  <div class="turn-content">
 
-      <span class="coffee-button col-md-3 col-md-offset-1">
-        <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
-
+    <span class="coffee-button col-md-3 col-md-offset-1">
+      <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
 
           <input type="hidden" name="_method" value="patch">
             <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">
@@ -30,9 +31,8 @@
         </form>
       </span>
 
-      <span class="beer-button col-md-2">
-        <form id="choose_beer" action="/random_events/bar" method="post">
-
+    <span class="beer-button col-md-2">
+      <form id="choose_beer" action="/random_events/bar" method="post">
           <input type="hidden" name="_method" value="patch">
             <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
             <br>
@@ -40,5 +40,6 @@
         </form>
       </span>
     </div>
+
 
 </div>
