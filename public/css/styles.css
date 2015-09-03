@@ -202,3 +202,11 @@ a {
 .running-page {
   background-image: url ("/img/cityscape.png");
 }
+
+.turn-content .positive-status {
+  color: #06de00;
+}
+
+.turn-content .negative-status {
+  color: #ff0000;
+}

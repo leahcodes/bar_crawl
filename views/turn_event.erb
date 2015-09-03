@@ -1,7 +1,7 @@
 
 <div class="col-md-8">
   <div class="header-block">
-    <h1>SE 39th and Hawthorne</h1>
+    <h1><%= @stop.name %></h1>
   </div>
   <div class="status">
     <strong><%=@green_status%></strong>
@@ -26,17 +26,19 @@
   <% end %>
 
   <% if @event.change_energy != nil %>
-    <h3><%= @event.change_energy %><span class="event-change"> Energy</span></h3>
+    <%= @empty_object.status_color(@event.change_energy) %>
+    <h3><%= @event.change_energy %> Energy</h3></span>
   <% end %>
 
   <% if @event.change_happiness != nil %>
-    <h3><%= @event.change_happiness %><span class="event-change"> Happiness</span></h3>
+    <%= @empty_object.status_color(@event.change_happiness) %>
+    <h3><%= @event.change_happiness %> Happiness</h3></span>
   <% end %>
 
   <% if @event.change_money != nil %>
-    <h3><%= @event.change_money %><span class="event-change"> Dollars</span></h3>
+    <%= @empty_object.status_color(@event.change_money) %>
+    <h3><%= @event.change_money %> Dollars</h3></span>
   <% end %>
-
+</div>
 
 <a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
-</div>

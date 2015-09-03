@@ -17,4 +17,14 @@ class Styling
     green_status_bar.push(percent)
     green_status = green_status_bar.join(" ")
   end
+
+  def status_color(color_number)
+    if color_number > 0
+      return "<span class='positive-status'>"
+    else
+      return "<span class='negative-status'>"
+    end
+  end
+
+
 end
