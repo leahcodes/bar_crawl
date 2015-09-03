@@ -12,7 +12,7 @@ body {
   text-align: center;
   border: 5px solid white;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 0%;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -102,11 +102,19 @@ a {
 .stats-box {
   border-right: 5px solid white;
   float: left;
-  font-size: 18px;
   text-align: left;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: 1em;
+  width: 100%;
+}
 
+@media screen and (max-width: 992px) {
+  .stats-box {
+    border-right: none;
+    border-bottom: 5px solid white;
+    text-align: center;
+  }
 }
 
 .status {
@@ -115,6 +123,10 @@ a {
   font-weight: bold;
   border-bottom: 3px solid white;
   padding: 5px;
+}
+
+.header-block {
+  padding-top: 1px;
 }
 
 .turn-content {
@@ -161,3 +173,13 @@ a {
 .beer-button {
   float: right;
 }*/
+
+
+
+
+.energy-level,
+.happiness-level,
+.money-level {
+  text-align: right;
+  width: 100%;
+}

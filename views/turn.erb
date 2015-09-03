@@ -8,11 +8,11 @@
 
   <div class="col-md-4">
     <div class="stats-box">
-        <p>char name</p>
+        <p><%= @game.name %></p>
         <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
-        <span class="col-sm-1">Energy: <span class="energy-level"><%=  %></span></span><br>
-        <span class="col-sm-1">Happiness: <span class='happiness-level'><%=  %></span></span><br>
-        <span class="col-xs-1">Money: </span><span class="col-xs-offset-6 col-xs-1">$</span><span class="money-level"> <%=  %></span>
+        Energy:<span class="energy-level"><%= @game.energy %>%</span><br>
+        Happiness:<span class='happiness-level'><%= @game.happiness %>%</span><br>
+        Money: $<span class="money-level"><%= @game.money %> </span>
     </div>
   </div>
 
@@ -20,20 +20,8 @@
     <div class="turn-content">
 
       <span class="coffee-button col-md-3 col-md-offset-1">
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
-=======
-        <form id="choose_coffee" action="/random_events/cafe" method="post">
->>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
-=======
-        <form id="choose_coffee" action="/random_events/cafe" method="post">
->>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
-=======
-        <form id="choose_coffee" action="/random_events/cafe" method="post">
->>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
+
 
           <input type="hidden" name="_method" value="patch">
             <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">

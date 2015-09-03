@@ -24,12 +24,13 @@ end
 
 post('/new_character') do
   name = params.fetch("name")
-  game = Game.create(:name => name, :money => 50, :energy => 30, :happiness => 30, :stop_id => 0 )
+  game = Game.create(:name => name, :money => 50, :energy => 30, :happiness => 30, :stop_id => 1 )
   redirect("/turn/1")
 end
 
 get('/turn/:id') do
-  turn = 1
+  @game = Game.all.last
+  turn = @game.stop_id
   bar = Styling.new
   @green_status = bar.status_bar(turn)
   erb(:turn)
@@ -39,6 +40,10 @@ end
 
 patch('/random_events/bar') do
   @game = Game.all.last
+  turn = @game.stop_id
+  bar = Styling.new
+  @green_status = bar.status_bar(turn)
+
   @event = RandomEvent.new_random_event
 
   @game.update({happiness: @game.happiness + 15}) # because drink beer
@@ -79,35 +84,16 @@ end
 
 ######################## CAFE ########################
 
+
 patch('/random_events/coffee_shop') do
-
-#   @game = Game.all()
-#   turn = params.fetch('id').to_i + 10
-#   bar = Styling.new
-#   @green_status = bar.status_bar(turn)
-#   erb(:turn)
-# end
-#
-# get('/random_event/bar') do
-#   @game = Game.all.last
-#   @event = RandomEvent.new_random_event
-#
-#   # @game.update({happiness: @game.happiness - @event.change_happiness}) if @event.change_happiness != nil
-#   # @game.update({energy: @game.energy - @event.change_energy}) if @event.change_energy != nil
-#   # @game.update({money: @game.money - @event.change_money}) if @event.change_money != nil
-#   turn = 10
-#   bar = Styling.new
-#   @green_status = bar.status_bar(turn)
-#   erb(:turn_event)
-# end
-#
-# patch('/random_event/bar') do
-#   turn = 1
-#   bar = Styling.new
-#   @green_status = bar.status_bar(turn)
-
   @game = Game.all.last
+  turn = @game.stop_id
+  bar = Styling.new
+  @green_status = bar.status_bar(turn)
+
   @event = RandomEvent.new_random_event
+
+
 
   @game.update({happiness: @game.energy + 15}) # because drink beer
 
