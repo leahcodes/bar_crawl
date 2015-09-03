@@ -32,7 +32,7 @@ class RandomEvent < ActiveRecord::Base
                               :change_energy => -10})
    RandomEvent.create({:bar => "was assulted, beaten, and left to die by an intoxicated and violent Jason Lane.",
                               :coffee_shop => "accidently knocked their artisan seltzer water palette cleanser on Jason Lane, who smashed his mason jar over their head and left them on the floor crying.",
-                              :change_energy => -80})
+                              :change_energy => -50})
    RandomEvent.create({:bar => "encountered a nude Carlo de Gregorio, doing the scorpion yoga pose on the sidewalk in front of Powells. Mysteriously sobered up a little.",
                               :coffee_shop => "encountered a nude Carlo de Gregorio, doing the scorpion yoga pose on the sidewalk in front of Powells. Mysteriously sobered up a little.",
                               :change_happiness => -10})

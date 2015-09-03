@@ -24,5 +24,19 @@
   <% else %>
     <h4><%= @game.name %> <%= @event.bar %></h4>
   <% end %>
+
+  <% if @event.change_energy != nil %>
+    <h3><%= @event.change_energy %><span class="event-change"> Energy</span></h3>
+  <% end %>
+
+  <% if @event.change_happiness != nil %>
+    <h3><%= @event.change_happiness %><span class="event-change"> Happiness</span></h3>
+  <% end %>
+
+  <% if @event.change_money != nil %>
+    <h3><%= @event.change_money %><span class="event-change"> Dollars</span></h3>
+  <% end %>
+
+
 <a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
 </div>

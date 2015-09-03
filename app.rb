@@ -33,14 +33,11 @@ get('/turn/:id') do
   @game = Game.all.last
   @turn = @game.stop_id
   bar = Styling.new
-<<<<<<< HEAD
-  @green_status = bar.status_bar(turn)
+  @green_status = bar.status_bar(@turn)
   @stop = Stop.find(@game.stop_id)
   @bar = Bar.find(@stop.bar_id)
   @coffee_shop = CoffeeShop.find(@stop.coffee_shop_id)
-=======
-  @green_status = bar.status_bar(@turn)
->>>>>>> 82b105c93681322dd41b06a11ae0bab787fde517
+
   erb(:turn)
 end
 
@@ -63,15 +60,15 @@ patch('/random_events/bar') do
     redirect('/lose')
   elsif # update random events
     if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness - @event.change_happiness})
+      @game.update({happiness: @game.happiness + @event.change_happiness})
     end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy - @event.change_energy})
+      @game.update({energy: @game.energy + @event.change_energy})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money - @event.change_money})
+      @game.update({money: @game.money + @event.change_money})
     end
   end
 
@@ -112,15 +109,15 @@ patch('/random_events/coffee_shop') do
     redirect('/lose')
   elsif # update random events
     if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness - @event.change_happiness})
+      @game.update({happiness: @game.happiness + @event.change_happiness})
     end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy - @event.change_energy})
+      @game.update({energy: @game.energy + @event.change_energy})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money - @event.change_money})
+      @game.update({money: @game.money + @event.change_money})
     end
   end
 
