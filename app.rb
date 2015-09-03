@@ -161,6 +161,10 @@ get('/lose') do
   erb(:lose)
 end
 
-get('/running') do
+get('/running/:id') do
   erb(:running_page)
+end
+
+get('/map/:id') do
+  erb(:map)
 end
