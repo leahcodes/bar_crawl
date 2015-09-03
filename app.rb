@@ -79,7 +79,7 @@ end
 
 ######################## CAFE ########################
 
-patch('/random_events/cafe') do
+patch('/random_events/coffee_shop') do
 
 #   @game = Game.all()
 #   turn = params.fetch('id').to_i + 10
