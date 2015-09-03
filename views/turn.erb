@@ -1,6 +1,6 @@
 <div class="col-md-8">
   <div class="header-block">
-    <h1>SE 39th and Hawthorne</h1>
+    <h1><%= @stop.name %></h1>
   </div>
   <div class="status">
     <strong><%=@green_status%></strong>
@@ -23,22 +23,23 @@
     <span class="coffee-button col-md-3 col-md-offset-1">
       <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
 
-        <input type="hidden" name="_method" value="patch">
-          <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">
-          <br>
-          <label id="coffee">Coffee @</label>
+          <input type="hidden" name="_method" value="patch">
+            <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">
+            <br>
+
+            <label id="coffee">Coffee @ <%= @coffee_shop.name %></label>
         </form>
       </span>
 
     <span class="beer-button col-md-2">
       <form id="choose_beer" action="/random_events/bar" method="post">
+          <input type="hidden" name="_method" value="patch">
+            <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
+            <br>
+            <label id="beer-label">Beer @ <%= @bar.name %></label>
+        </form>
+      </span>
+    </div>
 
-        <input type="hidden" name="_method" value="patch">
-        <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
-        <br>
-        <label id="beer-label">Beer @ <%= %></label>
-      </form>
-    </span>
-  </div>
 
 </div>

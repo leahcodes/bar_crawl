@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: #FFFFFF;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .container {
@@ -8,7 +9,6 @@ body {
 }
 
 .col-md-8 {
-  font-family: 'Press Start 2P', cursive;
   text-align: center;
   border: 5px solid white;
   margin-top: 5%;
@@ -187,6 +187,10 @@ a {
   text-align: right;
   width: 100%;
 }
+
+.about,
+.stats-box p  {
+  text-align: center;
 
 .map-button {
   align: center;
