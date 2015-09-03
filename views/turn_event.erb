@@ -22,5 +22,16 @@
     </div>
   </div>
 
+<<<<<<< HEAD
 
 <a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
+=======
+<div class="turn-content">
+  <% if @coffee == true  %>
+    <h4><%= @game.name %> <%= @event.cafe %></h4>
+  <% else %>
+    <h4><%= @game.name %> <%= @event.bar %></h4>
+  <% end %>
+<a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
+</div>
+>>>>>>> 1eff3e82a0bf77e9cd69c1d5bab1dbe5def236f4
