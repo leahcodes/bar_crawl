@@ -130,7 +130,6 @@ a {
 }
 
 .turn-content {
-  padding: 20px;
   margin-top:7%;
 }
 
@@ -182,4 +181,11 @@ a {
 .money-level {
   text-align: right;
   width: 100%;
+}
+
+.map-button {
+  align: center;
+}
+.btn-small {
+  font-size: 18px;
 }

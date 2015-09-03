@@ -30,9 +30,9 @@ end
 
 get('/turn/:id') do
   @game = Game.all.last
-  turn = @game.stop_id
+  @turn = @game.stop_id
   bar = Styling.new
-  @green_status = bar.status_bar(turn)
+  @green_status = bar.status_bar(@turn)
   erb(:turn)
 end
 
