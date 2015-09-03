@@ -24,15 +24,15 @@ end
 
 post('/new_character') do
   name = params.fetch("name")
-  game = Game.create(:name => name, :money => 50, :energy => 30, :happiness => 30, :stop_id => 0 )
+  game = Game.create(:name => name, :money => 50, :energy => 30, :happiness => 30, :stop_id => 1 )
   redirect("/turn/1")
 end
 
 get('/turn/:id') do
-  turn = 1
+  @game = Game.all.last
+  turn = @game.stop_id
   bar = Styling.new
   @green_status = bar.status_bar(turn)
-  @game = Game.all.last
   erb(:turn)
 end
 
@@ -92,6 +92,8 @@ patch('/random_events/coffee_shop') do
   @green_status = bar.status_bar(turn)
 
   @event = RandomEvent.new_random_event
+
+
 
   @game.update({happiness: @game.energy + 15}) # because drink beer
 

@@ -1,5 +1,5 @@
-class RenameCoffeeShopsToCoffeeShops < ActiveRecord::Migration
+class RenameCafesToCoffeeShops < ActiveRecord::Migration
   def change
-    rename_table :coffee_shops, :coffee_shops
+    rename_table :cafes, :coffee_shops
   end
 end
