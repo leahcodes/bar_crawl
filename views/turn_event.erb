@@ -9,18 +9,19 @@
 
 <div class="col-md-4">
   <div class="stats-box">
-      <p><%= @game.name %></p>
+      <h4><%= @game.name %></h4>
       <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
-      Energy:<span class="energy-level"><%= @game.energy %>%</span><br>
-      Happiness:<span class='happiness-level'><%= @game.happiness %>%</span><br>
-      Money: $<span class="money-level"><%= @game.money %> </span>
+      <p><span class="energy-level">Energy: <%= @game.energy %>%</span></p>
+      <p><span class='happiness-level'>Happiness: <%= @game.happiness %>%</span></p>
+      <p><span class="money-level">Money: $ <%= @game.money %> </span></p>
+      <p><span class="map-button"><a class="btn btn-small" href="/map/<%= @turn %>">Map</a></span></p>
   </div>
 </div>
 
 
 <div class="turn-content">
   <% if @coffee == true  %>
-    <h4><%= @game.name %> <%= @event.coffee_shop %></h4>
+    <h4 ><%= @game.name %> <%= @event.coffee_shop %></h4>
   <% else %>
     <h4><%= @game.name %> <%= @event.bar %></h4>
   <% end %>

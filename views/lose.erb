@@ -1,13 +1,17 @@
-<h1>You have died.</h1>
+<div class="col-md-8">
+  <div class="lose">
+    <h1>You have died.</h1>
 
-<% if @lose_condition == 0 %>
-  <h3>You died from lack of energy. Drink more coffee next time. Oh wait...</h3>
-<% elsif @lose_condition == 1 %>
-  <h3>You died of tachycardia. Drink less coffee next time. Try layering caffeine with a downer next time. Oxy?</h3>
-<% elsif @lose_condition == 2 %>
-  <h3>You died of alcohol poisoning. Nice.</h3>
-<% elsif @lose_condition == 3 %>
-  <h3>You were just too sober for a Friday night, and spontaneously gave up the ghost.</h3>
-<% end %>
+    <% if @lose_condition == 0 %>
+      <h3>You died from lack of energy. Drink more coffee next time. Oh wait...</h3>
+    <% elsif @lose_condition == 1 %>
+      <h3>You died of tachycardia. Drink less coffee next time. Try layering caffeine with a downer next time. Oxy?</h3>
+    <% elsif @lose_condition == 2 %>
+      <h3>You died of alcohol poisoning. Nice.</h3>
+    <% elsif @lose_condition == 3 %>
+      <h3>You were just too sober for a Friday night, and spontaneously gave up the ghost.</h3>
+    <% end %>
 
-<a class='btn' href="/">Play again!</a>
+    <a class='btn' href="/">Play again!</a>
+  </div>
+</div>
