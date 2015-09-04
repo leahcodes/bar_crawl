@@ -166,5 +166,6 @@ get('/running/:id') do
 end
 
 get('/map/:id') do
+  @turn = params.fetch('id').to_i
   erb(:map)
 end
