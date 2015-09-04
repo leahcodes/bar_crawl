@@ -38,6 +38,12 @@ get('/turn/:id') do
   @bar = Bar.find(@stop.bar_id)
   @coffee_shop = CoffeeShop.find(@stop.coffee_shop_id)
 
+  if @turn > 17
+      @turn = 17
+  else
+    @turn = @turn
+  end
+
   erb(:turn)
 end
 
@@ -47,10 +53,16 @@ patch('/random_events/bar') do
   @event = RandomEvent.new_random_event
 
   @game = Game.all.last
-  turn = @game.stop_id
+  @turn = @game.stop_id
   bar = Styling.new
-  @green_status = bar.status_bar(turn)
+  @green_status = bar.status_bar(@turn)
   @stop = Stop.find(@game.stop_id)
+
+  if @turn > 17
+      @turn = 17
+  else
+    @turn = @turn
+  end
 
   @game.update({happiness: @game.happiness + 10}) # because drink beer
 
@@ -98,10 +110,16 @@ patch('/random_events/coffee_shop') do
   @game = Game.all.last
   @event = RandomEvent.new_random_event
 
-  turn = @game.stop_id
+  @turn = @game.stop_id
   bar = Styling.new
-  @green_status = bar.status_bar(turn)
+  @green_status = bar.status_bar(@turn)
   @stop = Stop.find(@game.stop_id)
+
+  if @turn > 17
+      @turn = 17
+  else
+    @turn = @turn
+  end
 
   @game.update({energy: @game.energy + 10}) # because drink coffee
 
