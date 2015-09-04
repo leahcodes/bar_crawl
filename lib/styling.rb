@@ -1,6 +1,6 @@
 class Styling
 
-  def initialize do
+  def initialize
   end
 
   def status_bar(turn)

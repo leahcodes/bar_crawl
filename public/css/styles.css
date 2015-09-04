@@ -200,7 +200,9 @@ a {
   float: right;
 }*/
 
-.energy-level,
+.energy-level {
+  text-align: left;
+}
 .happiness-level,
 .money-level {
   text-align: right;
