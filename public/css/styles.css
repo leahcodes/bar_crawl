@@ -4,9 +4,6 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-.container {
-
-}
 
 .beer-button {
   margin-left: auto;
@@ -23,7 +20,7 @@ body {
   margin-right: -10%;
 }
 
-.col-md-8 {
+.main {
   text-align: center;
   border: 5px solid white;
   margin-top: 5%;
@@ -46,10 +43,21 @@ a {
   color: #FFFFFF;
 }
 
+.btn:hover,
+.form-btn:hover {
+  color: green;
+  border-color: green;
+}
+
 .btn {
   border: 2px solid white;
   font-size: 18px;
   border-radius: 0px;
+}
+
+.btn-turn-event {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-lg {
@@ -68,6 +76,7 @@ a {
 #index-img-box {
   float: center;
 }
+
 .box {
   border: 2px solid white;
   margin: 30px;
@@ -109,8 +118,15 @@ a {
     100% { opacity: 1.0; }
 }
 
-.h4 {
-  line-height: 120%
+h4 {
+  line-height: 1.5;
+}
+h3 {
+  line-height: 1.5;
+}
+
+.kyle {
+  line-height: .95em;
 }
 .avatar {
   margin-bottom: 3px;
@@ -151,9 +167,9 @@ a {
   padding-top: 1px;
 }
 
-.turn-content {
+/*.turn-content {
   margin-top:7%;
-}
+}*/
 
 .turn-event {
   font-size: 1em;
@@ -228,8 +244,8 @@ a {
 
 }
 
-.lose {
-  margin-bottom: 20px;
+.loser {
+  padding-bottom: 20px;
 }
 
 .win {
@@ -248,9 +264,6 @@ a {
   color: #ff0000;
 }
 
-.map {
-
-}
 
 #coffee {
   text-align: center;
