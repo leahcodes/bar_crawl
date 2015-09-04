@@ -5,6 +5,21 @@ body {
 }
 
 
+.beer-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beer-mug {
+  margin-left: auto;
+  margin-right: -20%;
+}
+
+.coffee-cup {
+  margin-left: auto;
+  margin-right: -10%;
+}
+
 .main {
   text-align: center;
   border: 5px solid white;
@@ -185,7 +200,9 @@ h3 {
   float: right;
 }*/
 
-.energy-level,
+.energy-level {
+  text-align: left;
+}
 .happiness-level,
 .money-level {
   text-align: right;
@@ -229,4 +246,25 @@ h3 {
 
 .turn-content .negative-status {
   color: #ff0000;
+}
+
+.map {
+
+}
+
+#coffee {
+  text-align: center;
+}
+
+.positive-status {
+  color: green;
+}
+
+.negative-status {
+  color: red;
+}
+
+
+.back-button {
+  color: black;
 }

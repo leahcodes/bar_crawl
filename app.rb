@@ -168,5 +168,22 @@ get('/animation') do
 end
 
 get('/map/:id') do
+  turn = params.fetch('id').to_i
+  if turn > 17
+      @turn = 17
+  else
+    @turn = turn
+  end
+  erb(:map)
+end
+
+get('/map/') do
+  game = Game.all.last
+  turn = game.stop_id
+  if turn > 17
+      @turn = 17
+  else
+    @turn = turn
+  end
   erb(:map)
 end

@@ -26,7 +26,7 @@
       <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
 
           <input type="hidden" name="_method" value="patch">
-            <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form">
+            <span class="coffee-cup"><input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form"></span>
             <br>
 
             <label id="coffee">Coffee @ <%= @coffee_shop.name %></label>
@@ -38,7 +38,7 @@
     <span class="beer-button col-md-4">
       <form id="choose_beer" action="/random_events/bar" method="post">
           <input type="hidden" name="_method" value="patch">
-            <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
+            <span class="beer-mug"><input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form"></span>
             <br>
             <label id="beer-label">Beer @ <%= @bar.name %></label>
         </form>

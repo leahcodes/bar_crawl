@@ -1,4 +1,17 @@
-<div class="col-md-8 main">
-  <img src="/img/map.png">
-  
+
+<div class="map col-md-8">
+  <img src="/img/maps/map-<%=@turn%>.png">
+  <button onclick="goBack()">Go Back</button>
 </div>
+
+<br>
+<br>
+<script class="back-button" {
+  constructor() {
+
+  }
+}>
+function goBack() {
+    window.history.back();
+}
+</script>
