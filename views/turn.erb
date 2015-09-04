@@ -1,4 +1,4 @@
-<div class="col-md-8">
+<div class="col-md-8 main">
   <div class="header-block">
     <h1><%= @stop.name %></h1>
   </div>
@@ -18,9 +18,11 @@
     </div>
   </div>
 
+<div class="col-md-8">
   <div class="turn-content">
 
-    <span class="coffee-button col-md-3 col-md-offset-1">
+    <h4>Choose</h4>
+    <span class="coffee-button col-md-4">
       <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
 
           <input type="hidden" name="_method" value="patch">
@@ -31,7 +33,9 @@
         </form>
       </span>
 
-    <span class="beer-button col-md-2">
+      <div class="col-md-4">OR</div>
+
+    <span class="beer-button col-md-4">
       <form id="choose_beer" action="/random_events/bar" method="post">
           <input type="hidden" name="_method" value="patch">
             <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form">
@@ -40,6 +44,8 @@
         </form>
       </span>
     </div>
+  </div>
+
 
 
 </div>

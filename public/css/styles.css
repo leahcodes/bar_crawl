@@ -4,11 +4,8 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-.container {
 
-}
-
-.col-md-8 {
+.main {
   text-align: center;
   border: 5px solid white;
   margin-top: 5%;
@@ -94,8 +91,11 @@ a {
     100% { opacity: 1.0; }
 }
 
-.h4 {
-  line-height: 120%
+h4 {
+  line-height: 1.5;
+}
+h3 {
+  line-height: 1.5;
 }
 .avatar {
   margin-bottom: 3px;
@@ -136,9 +136,9 @@ a {
   padding-top: 1px;
 }
 
-.turn-content {
+/*.turn-content {
   margin-top:7%;
-}
+}*/
 
 .turn-event {
   font-size: 1em;
@@ -211,8 +211,8 @@ a {
 
 }
 
-.lose {
-  margin-bottom: 20px;
+.loser {
+  padding-bottom: 20px;
 }
 
 .win {

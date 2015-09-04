@@ -25,7 +25,7 @@ end
 post('/new_character') do
   name = params.fetch("name")
   game = Game.create(:name => name, :money => 60.69, :energy => 30, :happiness => 30, :stop_id => 1 )
-  redirect("/turn/1")
+  redirect("/animation")
 end
 
 get('/turn/:id') do
@@ -59,21 +59,21 @@ patch('/random_events/bar') do
   @stop = Stop.find(@game.stop_id)
 
 
-  @game.update({happiness: @game.happiness + 15}) # because drink beer
+  @game.update({happiness: @game.happiness + 10}) # because drink beer
 
   if @game.lose == 2
     redirect('/lose')
   elsif # update random events
     if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness + @event.change_happiness})
+      @game.update({happiness: @game.happiness + @event.change_happiness.to_i})
     end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy + @event.change_energy})
+      @game.update({energy: @game.energy + @event.change_energy.to_i})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money + @event.change_money})
+      @game.update({money: @game.money + @event.change_money.to_i})
     end
   end
 
@@ -109,21 +109,22 @@ patch('/random_events/coffee_shop') do
 
   @empty_object = Styling.new
 
-  @game.update({energy: @game.energy + 15}) # because drink beer
+  @game.update({energy: @game.energy + 10}) # because drink beer
 
-  if @game.lose == 2
+  if @game.lose == 1
     redirect('/lose')
   elsif # update random events
-    if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness + @event.change_happiness})
-    end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy + @event.change_energy})
+      @game.update({energy: @game.energy + @event.change_energy.to_i})
+    end
+    
+    if @event.change_happiness != nil
+      @game.update({happiness: @game.happiness + @event.change_happiness.to_i})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money + @event.change_money})
+      @game.update({money: @game.money + @event.change_money.to_i})
     end
   end
 
@@ -141,6 +142,7 @@ patch('/random_events/coffee_shop') do
     @coffee = true
     erb(:turn_event)
   end
+
 end
 
 ########################
@@ -161,7 +163,7 @@ get('/lose') do
   erb(:lose)
 end
 
-get('/running/:id') do
+get('/animation') do
   erb(:running_page)
 end
 
