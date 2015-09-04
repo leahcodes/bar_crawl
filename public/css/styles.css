@@ -8,6 +8,21 @@ body {
 
 }
 
+.beer-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beer-mug {
+  margin-left: auto;
+  margin-right: -20%;
+}
+
+.coffee-cup {
+  margin-left: auto;
+  margin-right: -10%;
+}
+
 .col-md-8 {
   text-align: center;
   border: 5px solid white;
@@ -229,4 +244,12 @@ a {
 
 .turn-content .negative-status {
   color: #ff0000;
+}
+
+.map {
+
+}
+
+#coffee {
+  text-align: center;
 }
