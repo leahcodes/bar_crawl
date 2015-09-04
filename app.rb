@@ -58,15 +58,18 @@ patch('/random_events/bar') do
     redirect('/lose')
   elsif # update random events
     if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness + @event.change_happiness.to_i})
+      new_happiness = @game.happiness + @event.change_happiness
+      @game.update({happiness: new_happiness})
     end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy + @event.change_energy.to_i})
+      new_energy = @game.energy + @event.change_energy
+      @game.update({energy: new_energy})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money + @event.change_money.to_i})
+      new_money = @game.money + @event.change_money
+      @game.update({money: new_money})
     end
   end
 
@@ -93,30 +96,35 @@ end
 
 patch('/random_events/coffee_shop') do
   @game = Game.all.last
+  @event = RandomEvent.new_random_event
+
   turn = @game.stop_id
   bar = Styling.new
   @green_status = bar.status_bar(turn)
   @stop = Stop.find(@game.stop_id)
 
-  @event = RandomEvent.new_random_event
+  @game.update({energy: @game.energy + 10}) # because drink coffee
 
-  @game.update({energy: @game.energy + 10}) # because drink beer
 
   if @game.lose == 1
     redirect('/lose')
   elsif # update random events
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy + @event.change_energy.to_i})
+      new_energy = @game.energy + @event.change_energy
+      @game.update({energy: new_energy})
     end
 
     if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness + @event.change_happiness.to_i})
+      new_happiness = @game.happiness + @event.change_happiness
+      @game.update({happiness: new_happiness})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money + @event.change_money.to_i})
+      new_money = @game.money + @event.change_money
+      @game.update({money: new_money})
     end
+
   end
 
   if @game.lose != 4 # lose by energy/happiness conditions

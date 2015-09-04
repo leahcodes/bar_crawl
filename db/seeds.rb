@@ -18,7 +18,7 @@ class RandomEvent < ActiveRecord::Base
   RandomEvent.create({:bar => "got a ticket from the Finest for public intoxication and slightly sobered up. Thanks Officer Iman.",
                       :coffee_shop => "got a ticket from the Finest for drunken disorderly conduct and slightly sobered up. Thanks Officer Iman.",
                       :change_happiness => -10,
-                      :change_money => -30.52})
+                      :change_money => -30})
   RandomEvent.create({:bar => "took a nap in the dumpster with Bunker, who could not explain why he was in the dumpster.",
                       :coffee_shop => "took a nap on top of a coffee shop table with Bunker, who could not explain what he was doing there.",
                       :change_energy => 15,
@@ -40,7 +40,7 @@ class RandomEvent < ActiveRecord::Base
                       :change_happiness => -10})
   RandomEvent.create({:bar => "used Iman's Kush app to acquire medical grade marijuana to scent their backpack and attract dilenquent teenagers.",
                       :coffee_shop => "used Iman's Kush app to acquire medical grade marijuana to scent their backpack and attract dilenquent teenagers.",
-                      :change_money => -22.91})
+                      :change_money => -22})
   RandomEvent.create({:bar => "kidnapped by Tyler and taken to his new studio apartment but successfully escaped with an antique Ming dynasty vase.",
                       :coffee_shop => "ran into Tyler, who invited them to his new studio apartment for sleepy-time chamomile tea and then brutally thrown out the 3rd floor window.",
                       :change_energy => -40})

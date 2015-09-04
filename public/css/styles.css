@@ -43,7 +43,8 @@ a {
   color: #FFFFFF;
 }
 
-.btn:hover {
+.btn:hover,
+.form-btn:hover {
   color: green;
   border-color: green;
 }
@@ -52,6 +53,11 @@ a {
   border: 2px solid white;
   font-size: 18px;
   border-radius: 0px;
+}
+
+.btn-turn-event {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-lg {
@@ -117,6 +123,10 @@ h4 {
 }
 h3 {
   line-height: 1.5;
+}
+
+.kyle {
+  line-height: .95em;
 }
 .avatar {
   margin-bottom: 3px;
