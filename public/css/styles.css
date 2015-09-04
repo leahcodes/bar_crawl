@@ -255,3 +255,16 @@ a {
 #coffee {
   text-align: center;
 }
+
+.positive-status {
+  color: green;
+}
+
+.negative-status {
+  color: red;
+}
+
+
+.back-button {
+  color: black;
+}
