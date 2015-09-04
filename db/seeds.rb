@@ -3,8 +3,8 @@ class RandomEvent < ActiveRecord::Base
   RandomEvent.create({:bar => "lost 0.10 bitcoins in a untimely sports bet with Travis Crampton.",
                               :coffee_shop => "tipped Ryan the barista too much.",
                               :change_money => -23})
-  RandomEvent.create({:bar => "was chased by Andrew's lost & rabies-infested dog that wasn't properly tracked by his app.",
-                              :coffee_shop => "got attacked by Andrew's rabies infested dog in the coffee_shop that wasn't properly tracked by his app.",
+  RandomEvent.create({:bar => "was chased by Abdul and his rabies-infested dog.",
+                              :coffee_shop => "was chased by Abdul and his rabies-infested dog.",
                               :change_energy => -20})
   RandomEvent.create({:bar => "found half a bottle of Burnetts on the ground and drank it.",
                               :coffee_shop => "tried out the coffee shops' new and unnecessary wine menu.",
