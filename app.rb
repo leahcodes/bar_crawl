@@ -24,7 +24,7 @@ end
 
 post('/new_character') do
   name = params.fetch("name")
-  game = Game.create(:name => name, :money => 60.69, :energy => 30, :happiness => 30, :stop_id => 1 )
+  game = Game.create(:name => name, :money => 69.35, :energy => 30, :happiness => 30, :stop_id => 1 )
   redirect("/animation")
 end
 
@@ -44,20 +44,13 @@ end
 ##################### BAR ######################
 
 patch('/random_events/bar') do
+  @event = RandomEvent.new_random_event
 
   @game = Game.all.last
   turn = @game.stop_id
   bar = Styling.new
   @green_status = bar.status_bar(turn)
   @stop = Stop.find(@game.stop_id)
-
-
-  @empty_object = Styling.new
-
-
-  @event = RandomEvent.new_random_event
-  @stop = Stop.find(@game.stop_id)
-
 
   @game.update({happiness: @game.happiness + 10}) # because drink beer
 
@@ -107,8 +100,6 @@ patch('/random_events/coffee_shop') do
 
   @event = RandomEvent.new_random_event
 
-  @empty_object = Styling.new
-
   @game.update({energy: @game.energy + 10}) # because drink beer
 
   if @game.lose == 1
@@ -118,7 +109,7 @@ patch('/random_events/coffee_shop') do
     if @event.change_energy != nil
       @game.update({energy: @game.energy + @event.change_energy.to_i})
     end
-    
+
     if @event.change_happiness != nil
       @game.update({happiness: @game.happiness + @event.change_happiness.to_i})
     end
