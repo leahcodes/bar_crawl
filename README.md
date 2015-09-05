@@ -12,6 +12,9 @@ It lets you play the trail blazer game! It is inspired by The Oregon Trail. Visi
 
 clone this repository.
 ```
+git clone https://github.com/christhub/bar_crawl
+```
+```
 run bundle
 ```
 ```
