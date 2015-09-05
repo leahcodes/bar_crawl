@@ -1,5 +1,4 @@
-
-<div class="col-md-8">
+<div class="col-md-8 main">
   <div class="header-block">
     <h1><%= @stop.name %></h1>
   </div>
@@ -27,19 +26,23 @@
   <% end %>
 
   <% if @event.change_energy != nil %>
-    <%= @empty_object.status_color(@event.change_energy) %>
     <h3><%= @event.change_energy %> Energy</h3></span>
   <% end %>
 
   <% if @event.change_happiness != nil %>
-    <%= @empty_object.status_color(@event.change_happiness) %>
     <h3><%= @event.change_happiness %> Happiness</h3></span>
   <% end %>
 
   <% if @event.change_money != nil %>
-    <%= @empty_object.status_color(@event.change_money) %>
     <h3><%= @event.change_money %> Dollars</h3></span>
   <% end %>
 </div>
 
 <a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
+
+</div>
+
+
+<div class="img-center">
+  <img class="col-md-offset-2 col-md-8" src="/img/maps/map-<%=@turn%>.png">
+</div>

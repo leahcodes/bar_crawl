@@ -1,3 +1,5 @@
+# require 'active_record'
+# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 require("bundler/setup")
 Bundler.require(:default)
 
@@ -24,8 +26,8 @@ end
 
 post('/new_character') do
   name = params.fetch("name")
-  game = Game.create(:name => name, :money => 60.69, :energy => 30, :happiness => 30, :stop_id => 1 )
-  redirect("/turn/1")
+  game = Game.create(:name => name, :money => 69.35, :energy => 30, :happiness => 30, :stop_id => 1 )
+  redirect("/animation")
 end
 
 get('/turn/:id') do
@@ -38,42 +40,50 @@ get('/turn/:id') do
   @bar = Bar.find(@stop.bar_id)
   @coffee_shop = CoffeeShop.find(@stop.coffee_shop_id)
 
+  if @turn > 17
+      @turn = 17
+  else
+    @turn = @turn
+  end
+
   erb(:turn)
 end
 
 ##################### BAR ######################
 
 patch('/random_events/bar') do
+  @event = RandomEvent.new_random_event
 
   @game = Game.all.last
-  turn = @game.stop_id
+  @turn = @game.stop_id
   bar = Styling.new
-  @green_status = bar.status_bar(turn)
+  @green_status = bar.status_bar(@turn)
   @stop = Stop.find(@game.stop_id)
 
+  if @turn > 17
+      @turn = 17
+  else
+    @turn = @turn
+  end
 
-  @empty_object = Styling.new
-
-
-  @event = RandomEvent.new_random_event
-  @stop = Stop.find(@game.stop_id)
-
-
-  @game.update({happiness: @game.happiness + 15}) # because drink beer
+  @game.update({happiness: @game.happiness + 10}) # because drink beer
 
   if @game.lose == 2
     redirect('/lose')
   elsif # update random events
     if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness + @event.change_happiness})
+      new_happiness = @game.happiness + @event.change_happiness
+      @game.update({happiness: new_happiness})
     end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy + @event.change_energy})
+      new_energy = @game.energy + @event.change_energy
+      @game.update({energy: new_energy})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money + @event.change_money})
+      new_money = @game.money + @event.change_money
+      @game.update({money: new_money})
     end
   end
 
@@ -100,31 +110,41 @@ end
 
 patch('/random_events/coffee_shop') do
   @game = Game.all.last
-  turn = @game.stop_id
-  bar = Styling.new
-  @green_status = bar.status_bar(turn)
-  @stop = Stop.find(@game.stop_id)
-
   @event = RandomEvent.new_random_event
 
-  @empty_object = Styling.new
+  @turn = @game.stop_id
+  bar = Styling.new
+  @green_status = bar.status_bar(@turn)
+  @stop = Stop.find(@game.stop_id)
 
-  @game.update({energy: @game.energy + 15}) # because drink beer
+  if @turn > 17
+      @turn = 17
+  else
+    @turn = @turn
+  end
 
-  if @game.lose == 2
+  @game.update({energy: @game.energy + 10}) # because drink coffee
+
+
+  if @game.lose == 1
     redirect('/lose')
   elsif # update random events
-    if @event.change_happiness != nil
-      @game.update({happiness: @game.happiness + @event.change_happiness})
-    end
 
     if @event.change_energy != nil
-      @game.update({energy: @game.energy + @event.change_energy})
+      new_energy = @game.energy + @event.change_energy
+      @game.update({energy: new_energy})
+    end
+
+    if @event.change_happiness != nil
+      new_happiness = @game.happiness + @event.change_happiness
+      @game.update({happiness: new_happiness})
     end
 
     if @event.change_money != nil
-      @game.update({money: @game.money + @event.change_money})
+      new_money = @game.money + @event.change_money
+      @game.update({money: new_money})
     end
+
   end
 
   if @game.lose != 4 # lose by energy/happiness conditions
@@ -141,6 +161,7 @@ patch('/random_events/coffee_shop') do
     @coffee = true
     erb(:turn_event)
   end
+
 end
 
 ########################
@@ -161,7 +182,7 @@ get('/lose') do
   erb(:lose)
 end
 
-get('/running/:id') do
+get('/animation') do
   erb(:running_page)
 end
 
