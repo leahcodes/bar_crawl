@@ -27,7 +27,7 @@ run rake db:test:prepare
 run ruby app.rb
 ```
 
-then open your web browser of choice to 'localhost:4567'
+then open your web browser of choice to `localhost:4567`
 
 read through the instructions.
 
