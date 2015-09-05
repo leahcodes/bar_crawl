@@ -48,7 +48,7 @@ Adobe Photoshop
 
 ###Legal
 
-Copyright (c) 2015  Christian Lei
+Copyright (c) 2015  Andrew Dang, Clayton Easterbrooks, Leah Klamkin, Christian Lei
 
 This software is licensed under the MIT license.
 
