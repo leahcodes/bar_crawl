@@ -6,7 +6,7 @@
 
 It lets you play the trail blazer game! It is inspired by The Oregon Trail. Visit our game on heroku at:
 
-(**trail blazer game**)[http://trail-blazer-game.herokuapp.com]
+[**trail blazer game**](http://trail-blazer-game.herokuapp.com)
 
 ##Setup
 
